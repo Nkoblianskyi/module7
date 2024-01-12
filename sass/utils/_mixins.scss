@@ -1,0 +1,18 @@
+@mixin font($fs, $fw, $lh, $ls) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+@mixin display($df, $ai, $jc) {
+    display: $df;
+    align-items: $ai;
+    justify-content: $jc;
+}
+
+@mixin transition($tp, $td, $ttf) {
+    transition-property: $tp;
+    transition-duration: $td;
+    transition-timing-function: $ttf;
+}

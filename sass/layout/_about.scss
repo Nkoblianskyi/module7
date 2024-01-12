@@ -10,10 +10,7 @@
 
 .about-text{
     color: var(--about-text---);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.42px;
+    @include font (14px, 700, normal, 0.42px);
     text-transform: uppercase;
     margin-bottom: 10px;
 }
@@ -21,12 +18,9 @@
 .about-item-icon {
     width: 270px;
     height: 120px;
-    flex-shrink: 0;
     border-radius: 4px;
     background: #F5F4FA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display(flex, center, center);
     margin-bottom: 30px;
 }
 
@@ -36,8 +30,5 @@
 
 .about-text-items {
     color: var(--about-text-items);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.72; /* 171.429% */
-    letter-spacing: 0.42px;
+    @include font(14px, 400, 1.72, 0.42px);
 }

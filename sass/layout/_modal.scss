@@ -61,21 +61,14 @@
 .modal-form-title {
     color: var(--about-text---);
     text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.6px;
+    @include font(20px, 700, normal, 0.6px);
     width: 100%;
     margin-bottom: 12px;
 }
 
 .modal-form-label {
     color: var(--about-text-items);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.12px;
-    display: block;
+    @include font(12px, 400, normal, 0.12px);
     margin-bottom: 4px;
 }
 
@@ -116,10 +109,7 @@
 
 .modal-form-textarea::placeholder {
     color: rgba(117, 117, 117, 0.50);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.12px;
+    @include font(12px, 400, normal, 0.12px);
 }
 
 .modal-form-input:hover,
@@ -138,25 +128,18 @@
 }
 
 .checkbox-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display(flex, center, center);
     margin-bottom: 30px;
     gap: 10px;
 }
 
 .modal-checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display(flex, center, center);
 }
 
 .modal-checkbox-text {
     color: var(--about-text-items);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.71; /* 171.429% */
-    letter-spacing: 0.42px;
+    @include font(14px, 400, 1.71, 0.42px);
     display: flex;
     align-items: center;
 }
@@ -167,10 +150,8 @@
     border: 2px solid #212121;
     border-radius: 2px;
     margin-right: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include display(flex, center, center);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-icon {
@@ -192,17 +173,13 @@
 
 .modal-link-text {
     color: var(--active--);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.71;
-    letter-spacing: 0.42px;
+    @include font(14px, 400, 1.71, 0.42px);
     text-decoration-line: underline;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display(flex, center, center);
 }
 
 .modal-button {

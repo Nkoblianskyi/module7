@@ -5,19 +5,13 @@
 .customers-title {
     color: #212121;
     text-align: center;
-    font-family: Roboto;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.08px;
+    @include font(36px, 700, normal, 1.08px);
     margin-top: 94px;
     margin-bottom: 50px;
 }
 
 .customers-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display(flex, center, center);
     margin-bottom: 94px;
 }
 
@@ -27,19 +21,15 @@
 
 .customers-item-link {
     padding: 16px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display(flex, center, center);
     border-radius: 4px;
     border: 1px solid var(--customers-icon--);
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition(color, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 }
 
 .customers-item-icon {
     fill: var(--customers-icon--);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition(fill, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 }
 
 .customers-item-link:hover ,
