@@ -7,41 +7,74 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
-    object-fit: none;
+    object-fit: cover;
+    text-align: center;
+
 }
 
 .hero{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
 }
+
 .hero-title{
+    @include font (12px, 700, 1.62, 1.56px);
+    color: var(--hero-title--);
     display: flex;
     align-items: center;
-    color: var(--hero-title--);
-    @include font (44px, 900, 1.36, 2.64px);
     text-transform: uppercase;
-    width: 696px;
     text-align: center;
-    padding-bottom: 50px;  
+    padding-bottom: 30px;
+
+    @media screen and (min-width: 480px) {
+        @include font( 18px, 900, 1.61, 1.56px);
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 50px;
+        @include font (26px, 900, 1.61, 1.56px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 50px;
+        @include font (44px, 900, 1.36, 2.64px);
+    }
 }
 .hero-btn {
-    height: 50px;
-    flex-shrink: 0;
+    @include font (10px, 700, 1.87, 0.96px);
+    padding: 10px 24px;
+    // height: 50px;
     border-radius: 4px;
     background: var(--background-btn--);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: var(--hero-title--);
     text-align: center;
-    @include font (16px, 700, 1.87, 0.96px);
-    padding: 10px 32px;
+    // @include font (16px, 700, 1.87, 0.96px);
+    // padding: 10px 32px;
+    @media screen and (min-width: 480px) {
+            @include font (16px, 700, 1.87, 0.96px);
+        }
+        
+        @media screen and (min-width: 768px) {
+            @include font (16px, 700, 1.87, 0.96px);
+            padding: 10px 32px;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            @include font (16px, 700, 1.87, 0.96px);
+            padding: 10px 32px;
+        }
 }
 
 .hero-btn:hover ,
 .hero-btn:focus {
-    color: #212121;
-    background-color: #F5F4FA;;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background-color: hsl(210, 85%, 49%);
+    box-shadow: 0px 4px 4px 0px rgba(12, 118, 171, 0.15);
 }

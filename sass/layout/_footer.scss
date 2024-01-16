@@ -1,10 +1,33 @@
 
 .footer{
     background-color: #2F303A;
+    width: 100%;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 0;
+    }
+}
+
+.footer-grid {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
 }
 
 .footer-list {
+    @media screen and (max-width: 767px) {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199x) {
+    display: flex;
+    justify-content: center;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .footer-logo{
@@ -12,7 +35,10 @@
 }
 
 .footer-logo-link{
-    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Raleway;
     @include font(26px, 700, normal, 0.78px);
 }
 
@@ -27,6 +53,17 @@
 .address{
     margin-top: 20px;
     padding-bottom: 60px;
+}
+
+.footer-address-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include font( 14px, 400, 1.71, 0.42px);
+    @media screen and (min-width: 1200px) {
+        align-items: start;
+    }
 }
 
 .footer-address-item:not(:last-child){
@@ -50,9 +87,16 @@
 
 .footer-social{
     display: flex;
-    margin-left: 70px;
     flex-direction: column;
-    margin-top: 72px;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+        margin-left: 165px;
+        margin-top: 65px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-top: 72px;
+        margin-left: 70px;
+    }
 }
 
 .footer-social-title {
@@ -102,9 +146,16 @@
 
 .mailing-title {
     display: flex;
-    margin-top: 72px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
     margin-bottom: 20px;
-    margin-left: 93px;
+    @media screen and (min-width: 1200px) {
+        margin-top: 72px;
+        margin-bottom: 20px;
+        margin-left: 93px;
+        justify-content: start;
+    }
 }
 
 .mailing-label {
@@ -115,11 +166,18 @@
 
 .mailing-wrap {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: unset;
+    }
 }
 
 .mailing-input {
-    width: 358px;
+    width: 90%;
     height: 50px;
     flex-shrink: 0;
     color: #FFF;
@@ -132,8 +190,16 @@
     outline: none;
     padding-left: 16px;
     padding-right: 16px;
-    margin-left: 93px;
+    margin-bottom: 30px;
     @include transition(border, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+    @media screen and (min-width: 480px) {
+        width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        margin-left: 93px;
+        margin-bottom: 0;
+    }
 }
 
 .mailing-input::placeholder {

@@ -21,6 +21,12 @@
 .section-btn {
     @include display(flex, center, center);
     padding-bottom: 27px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 8px;
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
 }
 
 .text-btn{
@@ -61,19 +67,25 @@
     padding-top: 27px;
 }
 
-.gallery-portfolio{
+.gallery-portfolio {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
 }
 
-.portfolio-items{
+.portfolio-items {
     border-bottom: 1px solid #EEE;
     background-color: #FFF;
-    flex-basis: calc(100% / 3 - 30px);
     margin: 15px;
+    @media screen and (min-width: 768px) {
+            flex-basis: calc(100% / 2 - 30px);
+        }
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc(100% / 3 - 30px);
+    }
 }
 
-.portfolio-items:hover .portfolio-photo-text{
+.portfolio-items:hover .portfolio-photo-text {
     transform: translateY(0);
 }
 
