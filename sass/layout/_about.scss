@@ -10,11 +10,10 @@
 .about-list{
     width: 100%;
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        display: flex;
-        flex-wrap: wrap;
-        & :not(:last-child) {
-                margin-right: 30px;
-            }
+        display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 30px;
+            grid-column-gap: 30px;
     }
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -23,12 +22,6 @@
             }
     }
 
-}
-
-.about-list-item {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        flex-basis: calc(100%/2 - 30px);
-    }
 }
 
 .about-title {
@@ -74,5 +67,6 @@
 
 .about-title-text {
     color: var(--about-text-items);
+    font-family: Roboto;
     @include font(14px, 400, 1.72, 0.42px);
 }

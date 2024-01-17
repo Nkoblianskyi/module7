@@ -146,9 +146,12 @@
 
 .modal-checkbox-text {
     color: var(--about-text-items);
-    @include font(14px, 400, 1.71, 0.42px);
+    @include font(11px, 400, normal, 0.36px);
     display: flex;
     align-items: center;
+    @media screen and (min-width: 1200px) {
+        @include font(14px, 400, 1.71, 0.42px);
+    }
 }
 
 .checkbox-item {
